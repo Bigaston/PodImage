@@ -1,4 +1,7 @@
 # PodImage
+![GitHub package.json version](https://img.shields.io/github/package-json/v/Bigaston/PodImage)
+![Website](https://img.shields.io/website?down_message=Down&up_message=En%20ligne&url=https%3A%2F%2Fpodimage.bigaston.me)
+
 Un mini outil qui permet de générer une image à intégrer dynamiquement dans vos mails. Cette image montrera le dernier épisode publié dans le flux.
 
 Le site est accessible sur [podimage.bigaston.me](https://podimage.bigaston.me). Dessous vous retrouvez ces explications, et un générateur pour avoir directement les liens à copier coller.
