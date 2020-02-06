@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PodImage</title>
+        <link href="/static/github.css" rel="stylesheet"/>
+        <link rel="shortcut icon" type="image/png" href="/static/favicon.png"/>
+
+        <meta property="og:title" content="PodImage" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://podimage.bigaston.me" />
+        <meta property="og:image" content="/static/logo.png" />
+        <meta property="og:description" content="Mini outil qui permet de générer une image dynamique pour vos podcasts" />
+        <meta name="theme-color" content="#2c3e50">
+    </head>
+    <body>
+        <h1>PodImage</h1>
+        <p>Un mini outil qui permet de générer une image à intégrer dynamiquement dans vos mails. Cette image montrera le dernier épisode publié dans le flux.</p>
+    
+        <h2>Utilisation</h2>
+        <p>Vous pouvez directement récupérer le lien vers votre image en ajoutant <tt>https://podimage.bigaston.me/get/</tt> devant l'adresse de votre flux RSS. Vous serez automatiquement redirigé vers votre image.</p>
+        <p>Vous récupèrerez une URL de la forme <tt>podimage.bigaston.me/v1/i/[VOTRE ADRESSE EN BASE64]</tt>.</p>
+        <p>Vous pouvez aussi utiliser une autre route prévue <tt>podimage.bigaston.me/v1/r/[VOTRE ADRESSE EN BASE64]</tt> pour rediriger automatiquement vers le dernier épisode de votre flux.</p>
+    
+        <h2>Générateur</h2>
+        <p>Utilisez ce module pour générer automatiquement du code à intégrer</p>
+        <input type="text" id="feed_url" placeholder="https://example.com/rss"/>
+        <button onclick="generateInfo()">Générer</button>
+        <pre id="present"></pre>
+
+        <h2>Exemple</h2>
+        <p>Voici une image générée grâce à PodImage, qui redirigera automatiquement vers le dernier épisode de Script.</p>
+        <a href="./v1/r/aHR0cHM6Ly9zY3JpcHQubGVwb2RjYXN0LmZyL3Jzcw==" target="_blank"><img src="./v1/i/aHR0cHM6Ly9zY3JpcHQubGVwb2RjYXN0LmZyL3Jzcw==.png" alt="PodImage de Script"></img></a>
+
+        <script src="/static/index.js"></script>
+
+        <h2>Infos</h2>
+        <p>Codé par <a href="https://twitter.com/Bigaston" target="_blank">@Bigaston</a>. <br>
+        Idée d'encoder les URL en base64 par <a href="https://twitter.com/PofMagicfingers" target="_blank">@PofMagicfingers</a>.</p>
+
+        <p>⌨️ Code source : <a href="https://github.com/Bigaston/PodImage" target="_blank">https://github.com/Bigaston/PodImage</a>.<br>
+        🖥️ Le site web est hébergé sur un serveur financé par <a href="https://twitter.com/PodShows" target="_blank">PodShows</a>.<br>
+        💸 Vous pouvez me soutenir gratuitement sur <a href="https://utip.io/bigaston" target="_blank">ma page uTip</a>.</p>
+    </body>
+</html>
