@@ -84,7 +84,7 @@ app.get("/api/feed/*", (req, res) => {
     parser.parseURL(feed_url, (err, feed) => {
 
         if (feed) {
-            b64 = new Buffer.from(req.path.replace("/get/", "")).toString('base64')
+            b64 = new Buffer.from(req.path.replace("/api/feed/", "")).toString('base64')
             resObj = {
                 img: process.env.HOST + "/v1/i/" + b64,
                 redirect: process.env.HOST + "/v1/r/" + b64,
